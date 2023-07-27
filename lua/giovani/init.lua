@@ -17,7 +17,18 @@ require("giovani.configs_packages.tree")
 require("giovani.configs_packages.bufferline")
 require("giovani.configs_packages.org")
 require("giovani.configs_packages.comments")
-require("giovani.configs_packages.smartcolumn")
+
+-- require("giovani.configs_packages.colorPicker")
+require("giovani.configs_packages.blakline")
+require("giovani.configs_packages.colorize")
+require("giovani.configs_packages.symblosOutline")
+require("giovani.configs_packages.trouble")
+require("giovani.configs_packages.todo")
+
+require("giovani.configs_packages.null")
+
+--Anoing
+-- require("giovani.configs_packages.smartcolumn")
 
 -- Status line
 require("giovani.configs_packages.lualine")

@@ -6,6 +6,10 @@ require("mason-lspconfig").setup({
   "tsserver", "jsonls", "svelte"},
 })
 
+local on_attach = function(client, bufnr)
+  -- formating
+end
+
 -- LSPs configurations
 require("lspconfig").lua_ls.setup(require("giovani.lsp.settings.lua"))
 require("lspconfig").pyright.setup(require("giovani.lsp.settings.pyright"))

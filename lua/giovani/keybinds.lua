@@ -58,3 +58,12 @@ keymap("n", "<A-l>", ":BufferLineCycleNext <CR>", opts)
 keymap("n", "<A-h>", ":BufferLineCyclePrev <CR>", opts)
 keymap("n", "<A-h>", ":BufferLineCyclePrev <CR>", opts)
 keymap("n", "<C-x>0", ":wq <CR>", opts)
+
+-- Tabs 
+keymap("n", "<leader>n", ":tabnew <CR>", opts)
+keymap("n", "<leader>0", ":tabclose <CR>", opts)
+
+--Trouble
+keymap("n", "<leader>fw", ":TroubleToggle <CR>", opts)
+
+

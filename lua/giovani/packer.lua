@@ -88,13 +88,15 @@ return require('packer').startup(function(use)
   use {
     "williamboman/mason.nvim",
     run = ":MasonUpdate" -- :MasonUpdate updates registry contents
-  } 
+  }
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
 
   use "ThePrimeagen/harpoon"
   use 'mbbill/undotree'
   use "tpope/vim-fugitive"
+  use 'ziontee113/color-picker.nvim'
+
 --[[
  use {
   'VonHeikemen/lsp-zero.nvim',
@@ -141,13 +143,61 @@ use {
       'nvim-tree/nvim-web-devicons', -- optional
     },
   }
-
   use "nvim-orgmode/orgmode"
   use "numToStr/Comment.nvim"
   use "m4xshen/smartcolumn.nvim"
   use 'tamton-aquib/staline.nvim'
+
+  --Indentention lines
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use {
+    "phaazon/hop.nvim",
+    branch = 'v2'
+  }
+
+  --Highlight colors
+  use 'norcalli/nvim-colorizer.lua'
+
+  --The bar on the top of the file
+  use({
+  "utilyre/barbecue.nvim",
+  tag = "*",
+  requires = {
+    "SmiteshP/nvim-navic",
+    "nvim-tree/nvim-web-devicons", -- optional dependency
+  },
+  after = "nvim-web-devicons", -- keep this if you're using NvChad
+  config = function()
+    require("barbecue").setup()
+  end,
+  })
+
+  -- fuse finder
+  use {
+    'folke/todo-comments.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  -- find troubles in the code run usning <leader>fw
+  use {
+    'folke/trouble.nvim',
+    requires = { {'nvim-tree/nvim-web-devicons'} }
+  }
+
+
+  --Show the variables classies etc run using <leader>fs
+  use 'simrat39/symbols-outline.nvim'
+
+  use "sbdchd/neoformat"
+
+
+
+
+
+
+
   --Nao mexer, DO NOT TOUCH
-  --
     if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
