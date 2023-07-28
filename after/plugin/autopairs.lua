@@ -1,11 +1,11 @@
 -- Setup nvim-cmp.
-local status_ok, npairs = pcall(require, "nvim-autopairs")
+local status_ok, n = pcall(require, "nvim-autopairs")
 if not status_ok then
   print("Erro with autopais")
   return
 end
 
-npairs.setup {
+n.setup {
   check_ts = true,
   ts_config = {
     lua = { "string", "source" },

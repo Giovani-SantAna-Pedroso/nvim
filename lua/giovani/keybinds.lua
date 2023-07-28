@@ -34,6 +34,9 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
+--Select all
+keymap("n", "<C-a>", "gg<S-v>G", opts)
+
 -- Remove the behaivor that when you use paste to replace something 
 -- This something go to your clipboard
 keymap("v", "p", '"_dP', opts)
@@ -66,4 +69,7 @@ keymap("n", "<leader>0", ":tabclose <CR>", opts)
 --Trouble
 keymap("n", "<leader>fw", ":TroubleToggle <CR>", opts)
 
+--Split windown
+keymap("n", "<leader>sv", ":vsplit <CR>", opts)
+keymap("n", "<leader>sh", ":split <CR>", opts)
 

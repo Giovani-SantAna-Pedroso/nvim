@@ -1,5 +1,5 @@
 local fn = vim.fn
-
+    
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -190,12 +190,9 @@ use {
   use 'simrat39/symbols-outline.nvim'
 
   use "sbdchd/neoformat"
-
-
-
-
-
-
+  use "folke/which-key.nvim"
+  use "akinsho/toggleterm.nvim"
+  use "rebelot/kanagawa.nvim"
 
   --Nao mexer, DO NOT TOUCH
     if PACKER_BOOTSTRAP then

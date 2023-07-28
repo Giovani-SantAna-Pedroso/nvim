@@ -1,0 +1,12 @@
+-- local status, n = pcall(require,'orgmode')
+--
+-- if (not status) then
+--   print("Error when loading the orgmode packge")
+-- end
+--
+-- print("test config ord")
+--
+-- n.setup({
+--   org_agenda_files = {'~/Documents/org/*', '~/my-orgs/**/*'},
+--   org_default_notes_file = '~/Documents/org/refile.org',
+-- })

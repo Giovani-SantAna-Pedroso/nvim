@@ -35,6 +35,9 @@ vim.opt.sidescrolloff = 8
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
 vim.opt.shortmess:append "c"
+vim.opt.ai = true -- auto indent
+vim.opt.si = true -- smart indent
+vim.opt.wildignore: append{'*/node_modules/*'}
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
