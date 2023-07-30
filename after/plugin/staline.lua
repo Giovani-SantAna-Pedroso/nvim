@@ -1,4 +1,10 @@
-require('staline').setup {
+local status_ok, n = pcall(require, "staline")
+if not status_ok then
+  print("Error with the staline")
+  return
+end
+
+n.setup {
     defaults = {
         expand_null_ls = true,  -- This expands out all the null-ls sources to be shown
         left_separator  = "",

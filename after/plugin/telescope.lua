@@ -1,6 +1,6 @@
-local telescope_status_ok, builtin = pcall(require, "telescope.builtin")
-if not telescope_status_ok then
-  print("erro in telescope config")
+local status_ok, n = pcall(require, "telescope.builtin")
+if not status_ok then
+  print("Error with the telescope")
   return
 end
 
@@ -17,7 +17,7 @@ keymap("n", "<leader>fg", ":Telescope git_files<CR>", opts)
 
 -- Find word
 vim.keymap.set("n", "<leader>fw", function ()
-builtin.grep_string({search = vim.fn.input("Grep > ")})
+n.grep_string({search = vim.fn.input("Grep > ")})
 end)
 
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)

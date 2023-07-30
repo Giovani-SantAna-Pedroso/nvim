@@ -1,4 +1,10 @@
-require("bufferline").setup{
+local status_ok, n = pcall(require, "bufferline")
+if not status_ok then
+  print("Erro with bufferline")
+  return
+end
+
+n.setup{
   options={
     numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     mode="tabs", --Test this with tabs

@@ -1,10 +1,10 @@
-local cmp_status_ok, lualine = pcall(require, "lualine")
-if not cmp_status_ok then
+local status_ok, n = pcall(require, "lualine")
+if not status_ok then
   print("Error with the lualine")
   return
 end
 
-lualine.setup {
+n.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',

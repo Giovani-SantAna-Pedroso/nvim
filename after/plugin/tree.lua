@@ -1,4 +1,10 @@
-require("nvim-tree").setup({
+local status_ok, n = pcall(require, "nvim-tree")
+if not status_ok then
+  print("Error with the nvim-tree")
+  return
+end
+
+n.setup({
   sort_by = "case_sensitive",
   view = {
     width = 30,
@@ -39,6 +45,9 @@ require("nvim-tree").setup({
   },
   filters = {
     dotfiles = false,
+  },
+  git = {
+    ignore = false,
   },
 })
 

@@ -1,4 +1,10 @@
-require("trouble").setup {}
+local status_ok, n = pcall(require, "trouble")
+if not status_ok then
+  print("Error with the trouble")
+  return
+end
+
+n.setup {}
 
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }

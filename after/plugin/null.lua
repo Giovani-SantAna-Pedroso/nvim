@@ -1,9 +1,13 @@
-local null_ls = require("null-ls")
+local status_ok, n = pcall(require, "null-ls")
+if not status_ok then
+  print("Error with the null-ls")
+  return
+end
 
-null_ls.setup({
+n.setup({
     sources = {
-        null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.completion.spell,
+        n.builtins.formatting.stylua,
+        n.builtins.diagnostics.eslint,
+        n.builtins.completion.spell,
     },
 })

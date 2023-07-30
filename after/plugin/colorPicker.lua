@@ -1,4 +1,10 @@
-require("color-picker").setup({ -- for changing icons & mappings
+local status_ok, n = pcall(require, "color-picker")
+if not status_ok then
+  print("Erro with colorPicker")
+  return
+end
+
+n.setup({ -- for changing icons & mappings
 	-- ["icons"] = { "ﱢ", "" },
 	-- ["icons"] = { "ﮊ", "" },
 	-- ["icons"] = { "", "ﰕ" },

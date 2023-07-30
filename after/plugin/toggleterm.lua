@@ -1,4 +1,10 @@
-require("toggleterm").setup({
+local status_ok, n = pcall(require, "toggleterm")
+if not status_ok then
+  print("Error with the toggleterm")
+  return
+end
+
+n.setup({
   -- open_mapping = [[<C-t>]],
 })
 

@@ -1,11 +1,11 @@
-local telescope_status_ok, treesiter = pcall(require, "nvim-treesitter.configs")
-if not telescope_status_ok then
-  print("erro in treesiter config")
+local status_ok, n = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+  print("Error with the nvim-treesitter")
   return
 end
 
 
-treesiter.setup({
+n.setup({
   ensure_installed = {"python", "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query" },
   auto_install = true,
   
@@ -63,5 +63,5 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
-
+-- TODO
 --]]

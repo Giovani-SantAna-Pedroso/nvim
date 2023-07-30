@@ -1,7 +1,7 @@
 -- Setup nvim-cmp.
 local status_ok, n = pcall(require, "indent_blankline")
 if not status_ok then
-  print("Erro with autopais")
+  print("Erro with blankline")
   return
 end
 
