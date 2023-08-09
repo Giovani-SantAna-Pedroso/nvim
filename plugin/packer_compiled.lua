@@ -137,6 +137,11 @@ _G.packer_plugins = {
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["git.nvim"] = {
+    loaded = true,
+    path = "/home/giovani/.local/share/nvim/site/pack/packer/start/git.nvim",
+    url = "https://github.com/dinhhuy258/git.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -183,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["minimap.vim"] = {
+    loaded = true,
+    path = "/home/giovani/.local/share/nvim/site/pack/packer/start/minimap.vim",
+    url = "https://github.com/wfxr/minimap.vim"
   },
   moonfly = {
     loaded = true,
@@ -240,6 +250,11 @@ _G.packer_plugins = {
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/giovani/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -269,6 +284,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "/home/giovani/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
   },
   ["rose-pine"] = {
     loaded = true,

@@ -39,6 +39,10 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 -- vim.opt.si = true -- smart indent
 -- vim.opt.wildignore: append{'*/node_modules/*'}
 
+
+-- vim.opt.minimap_width = 10
+-- vim.opt.minimap_auto_start = 1
+-- vim.opt.minimap_auto_start_win_enter = 1
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

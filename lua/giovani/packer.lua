@@ -194,6 +194,21 @@ use {
   use "akinsho/toggleterm.nvim"
   use "rebelot/kanagawa.nvim"
 
+  use "windwp/nvim-ts-autotag"
+  
+  -- To improve the performance use with this 
+  -- https://github.com/fsouza/prettierd
+  use{
+    'MunifTanjim/prettier.nvim',
+    requires = { 
+      {'neovim/nvim-lspconfig'}, 
+      {'jose-elias-alvarez/null-ls.nvim'}, 
+    }
+  }
+
+  use 'dinhhuy258/git.nvim'
+
+  use 'wfxr/minimap.vim'
   --Nao mexer, DO NOT TOUCH
     if PACKER_BOOTSTRAP then
     require("packer").sync()
