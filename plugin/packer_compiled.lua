@@ -240,6 +240,11 @@ _G.packer_plugins = {
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/nvim-navic",
     url = "https://github.com/SmiteshP/nvim-navic"
   },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/giovani/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/giovani/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

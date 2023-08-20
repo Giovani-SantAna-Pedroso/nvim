@@ -39,7 +39,9 @@ lsp.svelte.setup(require("giovani.lsp.settings.svelte"))
 lsp.docker_compose_language_service.setup({})
 lsp.dockerls.setup({})
 lsp.html.setup({})
-lsp.tailwindcss.setup({})
+lsp.prismals.setup({})
+--it is broken the pc
+-- lsp.tailwindcss.setup({})
 
 --[[
 local status_ok, lspconfig = pcall(require, "lspconfig")

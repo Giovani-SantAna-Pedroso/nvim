@@ -132,9 +132,9 @@ use {
 
   --mod lines
   use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-}
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   --nvim tree
   use {
@@ -207,6 +207,7 @@ use {
   }
 
   use 'dinhhuy258/git.nvim'
+  use 'rcarriga/nvim-notify'
 
   use 'wfxr/minimap.vim'
   --Nao mexer, DO NOT TOUCH

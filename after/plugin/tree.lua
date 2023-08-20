@@ -6,10 +6,9 @@ end
 
 n.setup({
   sort_by = "case_sensitive",
+
   view = {
     width = 30,
-    hide_root_folder = true,
-
     float = {
       enable = false,
       quit_on_focus_loss = true,
@@ -40,7 +39,9 @@ n.setup({
         error = "",
       },
     },
+
   renderer = {
+    root_folder_label = false,
     group_empty = true,
   },
   filters = {
