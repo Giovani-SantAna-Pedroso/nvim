@@ -1,3 +1,10 @@
+* Dependencies
+
+** System 
+- tidy 
+- curl
+- jq
+
 * Test
 
   of

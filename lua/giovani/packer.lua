@@ -59,12 +59,15 @@ return require('packer').startup(function(use)
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
 
+
+  --Jumped
   --Markdown preview
  -- install without yarn or npm
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   --Colors schemes
   use "aktersnurra/no-clown-fiesta.nvim" -- Useful lua functions used ny lots of plugins
+  --Jumped
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
   use({ 'rose-pine/neovim', as = 'rose-pine',   })
 
@@ -134,6 +137,11 @@ use {
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  use {
+    "folke/noice.nvim",
+    requires = { "MunifTanjim/nui.nvim",'rcarriga/nvim-notify' }
   }
 
   --nvim tree
@@ -209,6 +217,15 @@ use {
   use 'dinhhuy258/git.nvim'
   use 'rcarriga/nvim-notify'
 
+  use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  requires = {'nvim-tree/nvim-web-devicons'}
+  }
+  use {
+    "rest-nvim/rest.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+  }
   use 'wfxr/minimap.vim'
   --Nao mexer, DO NOT TOUCH
     if PACKER_BOOTSTRAP then

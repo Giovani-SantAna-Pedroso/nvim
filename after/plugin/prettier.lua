@@ -5,9 +5,10 @@ if not status_ok then
 end
 
 n.setup({
-  bin = 'prettierd', -- or `'prettier '` (v0.23.3+)
+  bin = 'prettier', -- or `'prettierd prettier '` (v0.23.3+)
   filetypes = {
     "css",
+    "svelte",
     "graphql",
     "html",
     "javascript",
