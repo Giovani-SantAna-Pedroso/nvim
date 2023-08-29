@@ -1,17 +1,13 @@
+* TODO 
 * Dependencies
-
-** System 
 - tidy 
 - curl
-- jq
+  - jq
+* 
+* TODO
+Probabily there is a error in the orgmode plugin
+Problem with the symblos outline
+See if the prettier open with the all the files configured
+Read the undotree documentation
 
-* Test
 
-  of
-
-* mano
-  adf
-
-  ** testes
-
-  asfd

@@ -25,18 +25,11 @@ local plugins = {
   },
 
   {"nvim-telescope/telescope.nvim"},
-  {"nvim-treesitter/nvim-treesitter", cmd = ":TSUpdate"},
+  {"nvim-treesitter/nvim-treesitter"},
   {"nvim-treesitter/playground"},
   {"aktersnurra/no-clown-fiesta.nvim"},
 
   -- cmp plugins
-  {"hrsh7th/nvim-cmp"}, -- The completion plugin
-  {"hrsh7th/cmp-buffer"}, -- buffer completions
-  {"hrsh7th/cmp-path"}, -- path completions
-  {"hrsh7th/cmp-cmdline"}, -- cmdline completions
-  {"saadparwaiz1/cmp_luasnip"}, -- snippet completions
-  {"hrsh7th/cmp-nvim-lsp"},
-  {"hrsh7th/cmp-nvim-lua"},
 
   -- snippets
   {"L3MON4D3/LuaSnip"}, --snippet engine
@@ -44,7 +37,7 @@ local plugins = {
 
   -- LSP
   {"neovim/nvim-lspconfig"},
-  {"williamboman/mason.nvim", cmd= ":MasonUpdate"},
+--  {"williamboman/mason.nvim", cmd= ":MasonUpdate"},
   {"williamboman/mason-lspconfig.nvim"},
   {"jose-elias-alvarez/null-ls.nvim"},-- LSP diagnostics and code actions MUST change in the future
   {""},
@@ -53,7 +46,11 @@ local plugins = {
   {"tpope/vim-fugitive"},
   {"lewis6991/gitsigns.nvim"},
   -- {"tpope/vim-fugitive"},
-
+  --
+  -- Colorshemas
+  {'rose-pine/neovim',
+    priority = 1000,
+  },
   -- mod lines
   {"nvim-lualine/lualine.nvim",
     dependencies = {"nvim-tree/nvim-web-devicons"}
@@ -89,4 +86,4 @@ local plugins = {
 
 }
 
-require("lazy").setup(plugins)
+require("lazy").setup("giovani.plugins")

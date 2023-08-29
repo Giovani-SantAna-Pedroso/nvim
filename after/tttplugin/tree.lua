@@ -56,4 +56,4 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Toggle the nvim tree 
-keymap("n", "<leader>a", ":NvimTreeToggle <CR>", opts)
+keymap(("n", "<leader>a", ":NvimTreeToggle <CR>", opts)

@@ -1,11 +1,12 @@
 --Basic configurations
 require("giovani.keybinds")
 require("giovani.options")
-require("giovani.packer")
-require("giovani.colorschema")
+-- require("giovani.packer")
 require("giovani.spell")
+require("giovani.lazy")
+-- colorshema must be after the lazy
+require("giovani.colorschema")
 -- I will do the migration tother time
--- require("giovani.lazy")
 
 -- Lsp to see more to go ./lsp/init.lua 
 require("giovani.lsp")
