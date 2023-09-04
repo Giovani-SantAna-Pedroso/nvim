@@ -2,7 +2,8 @@ return{
   "nvim-telescope/telescope.nvim",
   dependecies = {"nvim-lua/plenary.nvim"},
   config = function()
-   local n =  require("telescope.builtin")
+    local n =  require("telescope.builtin")
+
 
     --keybinds
     local opts = { noremap = true, silent = true }
@@ -15,10 +16,10 @@ return{
     -- Find all files add in the git (will ignore the node moduls folder
     keymap("n", "<leader>fg", ":Telescope git_files<CR>", opts)
 
-    -- Find word
-    vim.keymap.set("n", "<leader>fw", function ()
-    n.grep_string({search = vim.fn.input("Grep > ")})
-    end)
+    -- Find word does not work and I don't find useful
+    -- vim.keymap.set("n", "<leader>fw", function ()
+    --   n.grep_string({search = vim.fn.input("Grep > ")})
+    -- end)
 
     keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
   end
