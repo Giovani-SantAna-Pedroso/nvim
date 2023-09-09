@@ -59,6 +59,14 @@ return require('packer').startup(function(use)
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
 
+  -- REmote development
+  use {
+      'chipsenkbeil/distant.nvim',
+      branch = 'v0.3',
+      config = function()
+          require('distant'):setup()
+      end
+  }
 
   --Jumped
   --Markdown preview
@@ -226,6 +234,14 @@ use {
   use {
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
+  }
+  use {
+    "ggandor/leap.nvim",
+    requires={"tpope/vim-repeat"},
+    config= function()
+      local n = require("leap")
+      n.add_default_mappings()
+    end
   }
   use 'wfxr/minimap.vim'
   --Nao mexer, DO NOT TOUCH

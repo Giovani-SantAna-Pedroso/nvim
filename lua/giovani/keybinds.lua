@@ -69,3 +69,7 @@ keymap("n", "<leader>fw", ":TroubleToggle <CR>", opts)
 keymap("n", "<leader>sv", ":vsplit <CR>", opts)
 keymap("n", "<leader>sh", ":split <CR>", opts)
 
+
+
+
+
