@@ -21,7 +21,7 @@ mason.setup()
 lspconfig.setup({
   ensure_installed = {"lua_ls","clangd","dockerls",
   "docker_compose_language_service","html", "pyright",
-  "tsserver", "jsonls", "svelte", "tailwindcss"},
+  "tsserver", "jsonls", "svelte", "tailwindcss", "vue-language-server"},
 })
 
 local on_attach = function(client, bufnr)
@@ -33,13 +33,17 @@ lsp.lua_ls.setup(require("giovani.lsp.settings.lua"))
 lsp.pyright.setup(require("giovani.lsp.settings.pyright"))
 --lsp.jsonls.setup(require("giovani.lsp.settings.json"))
 lsp.jsonls.setup({})
-lsp.tsserver.setup(require("giovani.lsp.settings.tsserver"))
+-- I'm trying to use the volar a.k.a vue-language-server
+-- lsp.tsserver.setup(require("giovani.lsp.settings.tsserver"))
 lsp.clangd.setup(require("giovani.lsp.settings.clangd"))
 lsp.svelte.setup(require("giovani.lsp.settings.svelte"))
 lsp.docker_compose_language_service.setup({})
 lsp.dockerls.setup({})
 lsp.html.setup({})
 lsp.prismals.setup({})
+lsp.volar.setup{
+  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+}
 --it is broken the pc
 -- lsp.tailwindcss.setup({})
 

@@ -11,3 +11,5 @@ require("giovani.colorschema")
 -- Lsp to see more to go ./lsp/init.lua 
 require("giovani.lsp")
 
+-- Colemak
+require("giovani.colemakdh")
