@@ -21,7 +21,7 @@ mason.setup()
 lspconfig.setup({
   ensure_installed = {"lua_ls","clangd","dockerls",
   "docker_compose_language_service","html", "pyright",
-  "tsserver", "jsonls", "svelte", "tailwindcss", "vue-language-server"},
+  "tsserver","csharp_ls", "jsonls", "svelte", "tailwindcss", "volar"},
 })
 
 local on_attach = function(client, bufnr)
@@ -44,6 +44,7 @@ lsp.prismals.setup({})
 lsp.volar.setup{
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
+lsp.csharp_ls.setup{}
 --it is broken the pc
 -- lsp.tailwindcss.setup({})
 
