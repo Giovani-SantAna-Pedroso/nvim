@@ -26,8 +26,8 @@ n.setup{
 
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-keymap("n", "<A-k>", ":BufferLineCycleNext <CR>", opts)
-keymap("n", "<A-j>", ":BufferLineCyclePrev <CR>", opts)
+keymap("n", "<A-e>", ":BufferLineCycleNext <CR>", opts)
+keymap("n", "<A-n>", ":BufferLineCyclePrev <CR>", opts)
 keymap("n", "<C-x>0", ":wq <CR>", opts)
 -- local status_ok, bufferline = pcall(require, "bufferline")
 -- if not status_ok then

@@ -235,6 +235,9 @@ use {
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
   }
+  use{
+    "xiyaowong/transparent.nvim"
+  }
   use {
     "ggandor/leap.nvim",
     requires={"tpope/vim-repeat"},
