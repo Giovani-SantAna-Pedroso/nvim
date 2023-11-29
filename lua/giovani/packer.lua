@@ -148,11 +148,10 @@ use {
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
-  use {
-    "folke/noice.nvim",
-    requires = { "MunifTanjim/nui.nvim",'rcarriga/nvim-notify' }
-  }
-
+  -- use {
+  --   "folke/noice.nvim",
+  --   requires = { "MunifTanjim/nui.nvim",'rcarriga/nvim-notify' }
+  -- }
   --nvim tree
   use {
     'nvim-tree/nvim-tree.lua',
@@ -246,7 +245,8 @@ use {
       n.add_default_mappings()
     end
   }
-  use 'wfxr/minimap.vim'
+  -- use 'OmniSharp/Omnisharp-vim'
+  -- use 'wfxr/minimap.vim'
   --Nao mexer, DO NOT TOUCH
     if PACKER_BOOTSTRAP then
     require("packer").sync()

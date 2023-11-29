@@ -41,10 +41,11 @@ lsp.docker_compose_language_service.setup({})
 lsp.dockerls.setup({})
 lsp.html.setup({})
 lsp.prismals.setup({})
+lsp.omnisharp.setup(require("giovani.lsp.settings.omnisharp"))
 -- lsp.volar.setup{
 --   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 -- }
-lsp.csharp_ls.setup{}
+-- lsp.csharp_ls.setup{}
 --it is broken the pc
 -- lsp.tailwindcss.setup({})
 
