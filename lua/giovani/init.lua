@@ -13,3 +13,6 @@ require("giovani.lsp")
 
 -- Colemak
 require("giovani.colemakdh")
+
+--folding code
+require("giovani.folding")
