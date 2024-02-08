@@ -21,7 +21,7 @@ mason.setup()
 lspconfig.setup({
   ensure_installed = {"lua_ls","clangd","dockerls",
   "docker_compose_language_service","html", "pyright",
-  "tsserver","csharp_ls", "jsonls", "svelte", "tailwindcss", "volar"},
+  "tsserver","csharp_ls","omnisharp", "jsonls", "svelte", "tailwindcss", "volar"},
 })
 
 local on_attach = function(client, bufnr)
@@ -41,13 +41,12 @@ lsp.docker_compose_language_service.setup({})
 lsp.dockerls.setup({})
 lsp.html.setup({})
 lsp.prismals.setup({})
-lsp.omnisharp.setup(require("giovani.lsp.settings.omnisharp"))
+-- lsp.omnisharp.setup(require("giovani.lsp.settings.omnisharp"))
 -- lsp.volar.setup{
 --   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 -- }
--- lsp.csharp_ls.setup{}
---it is broken the pc
--- lsp.tailwindcss.setup({})
+lsp.csharp_ls.setup{}
+lsp.tailwindcss.setup({})
 
 --[[
 local status_ok, lspconfig = pcall(require, "lspconfig")
