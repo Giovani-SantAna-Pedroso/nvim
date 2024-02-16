@@ -1,11 +1,9 @@
--- Add here plugins whom does not need configuration
-return{
-  {"aktersnurra/no-clown-fiesta.nvim"},
-  {"phaazon/hop.nvim", config= true},
-  {"folke/todo-comments.nvim",
-    config= true, 
-    dependencies = {"nvim-lua/plenary.nvim"},
-    event= {"InsertEnter"},
-  },
-  {"folke/which-key.nvim", config= true},
+return {
+	"norcalli/nvim-colorizer.lua",
+	"lewis6991/gitsigns.nvim",
+	"phaazon/hop.nvim",
+	{ "folke/todo-comments.nvim", dependecies = {
+		"nvim-lua/plenary.nvim",
+	} },
+	-- "folke/which-key.nvim",
 }
