@@ -8,10 +8,12 @@ return {
 		conform.setup({
 			formatters_by_ft = {
 				javascript = { "prettier" },
+				solidity = { "prettier" },
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
+				rust = { "rustfmt" },
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },

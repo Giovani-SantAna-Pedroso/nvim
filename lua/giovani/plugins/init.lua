@@ -5,5 +5,7 @@ return {
 	{ "folke/todo-comments.nvim", dependecies = {
 		"nvim-lua/plenary.nvim",
 	} },
+	"rktjmp/playtime.nvim",
+	"ThePrimeagen/vim-be-good",
 	-- "folke/which-key.nvim",
 }

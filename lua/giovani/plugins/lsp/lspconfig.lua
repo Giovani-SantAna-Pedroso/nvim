@@ -75,6 +75,12 @@ return {
 			settings = require("giovani.plugins.lsp.settings.pyright"),
 		})
 
+		lspconfig["rust_analyzer"].setup({
+			capabilities = basic.capabilities,
+			on_attach = basic.on_attach,
+			settings = require("giovani.plugins.lsp.settings.rust_analyzer"),
+		})
+
 		lspconfig["tailwindcss"].setup({
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
@@ -94,6 +100,11 @@ return {
 		})
 
 		lspconfig["yamlls"].setup({
+			capabilities = basic.capabilities,
+			on_attach = basic.on_attach,
+		})
+
+		lspconfig["solidity_ls"].setup({
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})

@@ -36,7 +36,10 @@ return {
 				"jsonls",
 				"svelte",
 				"tailwindcss",
+				"rust_analyzer",
 				"volar",
+				-- "vscode-solidity-server",
+				-- "solidity_ls",
 				"cssls",
 				-- "yaml-language-server",
 			},
@@ -47,6 +50,7 @@ return {
 			ensure_installed = {
 				"prettier",
 				"stylua",
+				"rustfmt",
 				"eslint_d",
 				"black",
 			},

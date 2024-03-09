@@ -18,6 +18,8 @@ require("lazy").setup({
 	{ import = "giovani.plugins.life-quality" },
 	{ import = "giovani.plugins.essential" },
 	{ import = "giovani.plugins.navegation" },
+	{ import = "giovani.plugins.useless" },
+	{ import = "giovani.plugins.editing" },
 	checker = { enable = true, notify = false },
 	change_detection = { notify = false },
 })
