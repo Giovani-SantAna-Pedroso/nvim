@@ -20,12 +20,10 @@ vim.cmd.noremap("j n")
 vim.cmd.noremap("k e")
 vim.cmd.noremap("l i")
 --replace the keys that were overwrite
---next search term w 
+--next search term w
 vim.cmd.noremap("h n")
 vim.cmd.noremap("H N")
 
---Undo 
+--Undo
 vim.cmd.noremap("k u")
 vim.cmd.noremap("K U")
-
-
