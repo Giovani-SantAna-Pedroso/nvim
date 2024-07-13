@@ -58,11 +58,22 @@ return {
 			settings = require("giovani.plugins.lsp.settings.lua"),
 		})
 
-		lspconfig["omnisharp"].setup({
+		-- ✓ csharp-language-server csharp_ls
+
+		lspconfig["csharp_ls"].setup({
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
-			settings = require("giovani.plugins.lsp.settings.omnisharp"),
 		})
+		-- lspconfig["omnisharp"].setup({
+		-- 	capabilities = basic.capabilities,
+		-- 	on_attach = basic.on_attach,
+		-- 	cmd = { "dotnet", "/usr/bin/omnisharp" },
+		-- enable_roslyn_analysers = true,
+		-- enable_import_completion = true,
+		-- organize_imports_on_format = true,
+		-- enable_decompilation_support = true,
+		-- settings = require("giovani.plugins.lsp.settings.omnisharp"),
+		-- })
 
 		lspconfig["prismals"].setup({
 			capabilities = basic.capabilities,

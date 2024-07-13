@@ -9,11 +9,13 @@ require("giovani.lazy")
 -- require("giovani.colorschema")
 -- I will do the migration tother time
 
--- Lsp to see more to go ./lsp/init.lua 
+-- Lsp to see more to go ./lsp/init.lua
 -- require("giovani.lsp")
 
 -- Colemak
-require("giovani.colemakdh")
+-- require("giovani.colemakdh")
 
 --folding code
 -- require("giovani.folding")
+--
+require("giovani.fonts")
