@@ -68,6 +68,12 @@ return {
 			-- settings =  require("giovani.plugins.lsp.settings.json")
 		})
 
+		lspconfig["jdtls"].setup({
+			capabilities = basic.capabilities,
+			on_attach = basic.on_attach,
+			-- settings =  require("giovani.plugins.lsp.settings.json")
+		})
+
 		-- ✓ csharp-language-server csharp_ls
 
 		-- lspconfig["omnisharp"].setup({

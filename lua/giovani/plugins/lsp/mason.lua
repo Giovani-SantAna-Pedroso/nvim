@@ -41,6 +41,7 @@ return {
 				"dockerls",
 				"docker_compose_language_service",
 				"html",
+				"jdtls",
 				"pyright",
 				"tsserver",
 				"csharp_ls",
@@ -66,6 +67,7 @@ return {
 			toInstallLsp = {
 				"bashls",
 				"dockerls",
+				"jdtls",
 				"docker_compose_language_service",
 				"html",
 				"pyright",
