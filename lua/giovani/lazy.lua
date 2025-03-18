@@ -20,6 +20,7 @@ require("lazy").setup({
 	{ import = "giovani.plugins.navegation" },
 	{ import = "giovani.plugins.useless" },
 	{ import = "giovani.plugins.editing" },
+	{ import = "giovani.plugins.dap" },
 	checker = { enable = true, notify = false },
 	change_detection = { notify = false },
 })

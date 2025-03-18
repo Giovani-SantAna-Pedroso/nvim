@@ -8,6 +8,7 @@ return {
 	config = function()
 		local lspconfig = require("lspconfig")
 		local basic = require("giovani.plugins.lsp.settings.basic")
+		local basic_2 = require("giovani.plugins.lsp.settings.basic_2")
 
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
@@ -32,16 +33,24 @@ return {
 
 		lspconfig["pyright"].setup({
 			capabilities = basic.capabilities,
-			on_attach = basic.on_attach,
+			on_attach = basic_2.on_attach,
 			settings = require("giovani.plugins.lsp.settings.pyright"),
 		})
 
-		lspconfig["tsserver"].setup({
-			capabilities = basic.capabilities,
-			on_attach = basic.on_attach,
+		lspconfig["ts_ls"].setup({
+
+			capabilities = basic_2.capabilities,
+			on_attach = basic_2.on_attach,
 			settings = require("giovani.plugins.lsp.settings.tsserver"),
 		})
 
+		-- lspconfig.eslint.setup({
+		-- 	cmd = { "bun", "x", "eslint_d", "--stdio" }, -- Use Bun for ESLint
+		-- 	on_attach = function(client)
+		-- 		client.server_capabilities.documentFormattingProvider = true
+		-- 	end,
+		-- })
+		--
 		lspconfig["cssls"].setup({
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
@@ -93,8 +102,8 @@ return {
 		})
 
 		lspconfig["tailwindcss"].setup({
-			capabilities = basic.capabilities,
-			on_attach = basic.on_attach,
+			capabilities = basic_2.capabilities,
+			on_attach = basic_2.on_attach,
 			settings = require("giovani.plugins.lsp.settings.tsserver"),
 		})
 
@@ -122,8 +131,8 @@ return {
 			})
 
 			lspconfig["clangd"].setup({
-				capabilities = basic.capabilities,
-				on_attach = basic.on_attach,
+				capabilities = basic_2.capabilities,
+				on_attach = basic_2.on_attach,
 				settings = require("giovani.plugins.lsp.settings.clangd"),
 			})
 
@@ -134,8 +143,8 @@ return {
 			})
 
 			lspconfig["rust_analyzer"].setup({
-				capabilities = basic.capabilities,
-				on_attach = basic.on_attach,
+				capabilities = basic_2.capabilities,
+				on_attach = basic_2.on_attach,
 				settings = require("giovani.plugins.lsp.settings.rust_analyzer"),
 			})
 		end

@@ -1,3 +1,16 @@
+# To see later
+
+conform.nvim
+gitsigns.nvim
+markview.nvim
+nvim-lspconfig
+nvim -treesitter
+vim-moonfly-colors
+
+# To fix
+
+trouble.nvim
+
 # package do add
 
 nvim-lua/popup.nvim
