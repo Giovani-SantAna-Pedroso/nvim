@@ -49,11 +49,8 @@ return {
 				"svelte",
 				"tailwindcss",
 				"rust_analyzer",
-				"volar",
-				-- "vscode-solidity-server",
-				-- "solidity_ls",
+				"solidity_ls",
 				"cssls",
-				-- "yaml-language-server",
 			}
 
 			toInstallNull = {
@@ -75,7 +72,6 @@ return {
 				"jsonls",
 				"svelte",
 				"tailwindcss",
-				"volar",
 				-- "vscode-solidity-server",
 				-- "solidity_ls",
 				"cssls",

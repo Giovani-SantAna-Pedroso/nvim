@@ -2,12 +2,15 @@ return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
 	init = function()
+		wk = require("which-key")
 		vim.o.timeout = true
-		vim.o.timeoutlen = 300
+		vim.o.timeoutlen = 200
+		wk.setup({
+			spelling = {
+				enabled = true,
+				suggestions = 20,
+			},
+		})
 	end,
-	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
-	},
+	opts = {},
 }
