@@ -10,6 +10,7 @@ M.capabilities = capabilities
 local on_attach = function(client, bufnr)
 	opts.buffer = bufnr
 
+	--server ./godothost --remote-send "<C-\><C-N>:n{file}<CR>{line}G{col}|"
 	-- set keybinds
 	opts.desc = "Show LSP references"
 	keymap.set("n", "<leader>qgr", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references

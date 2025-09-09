@@ -10,6 +10,29 @@ return {
 		local basic = require("giovani.plugins.lsp.settings.basic")
 		local basic_2 = require("giovani.plugins.lsp.settings.basic_2")
 
+		-- Show diagnostics on hover
+		vim.api.nvim_create_autocmd({ "CursorHold" }, {
+			pattern = "*",
+			callback = function()
+				for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+					if vim.api.nvim_win_get_config(winid).zindex then
+						return
+					end
+				end
+				vim.diagnostic.open_float({
+					scope = "cursor",
+					focusable = false,
+					close_events = {
+						"CursorMoved",
+						"CursorMovedI",
+						"BufHidden",
+						"InsertCharPre",
+						"WinLeave",
+					},
+				})
+			end,
+		})
+
 		vim.diagnostic.config({
 			signs = {
 				text = {
@@ -41,6 +64,8 @@ return {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+
+		lspconfig["gdscript"].setup(basic.capabilities)
 
 		lspconfig["pyright"].setup({
 			capabilities = basic.capabilities,

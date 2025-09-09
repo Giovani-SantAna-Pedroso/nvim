@@ -38,6 +38,7 @@ return {
 				"bashls",
 				"lua_ls",
 				"clangd",
+				"gdtoolkit",
 				"dockerls",
 				"docker_compose_language_service",
 				"html",

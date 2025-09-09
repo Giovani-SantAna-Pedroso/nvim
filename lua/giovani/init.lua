@@ -3,6 +3,7 @@ require("giovani.keybinds")
 require("giovani.options")
 -- require("giovani.packer")
 require("giovani.lazy")
+require("giovani.godot")
 -- require("giovani.spell")
 -- require("giovani.lazy")
 -- colorshema must be after the lazy

@@ -8,6 +8,9 @@ return {
 		n.setup({
 			ensure_installed = {
 				"python",
+				"gdscript",
+				"godot_resource",
+				"gdshader",
 				"markdown",
 				"java",
 				"rust",
