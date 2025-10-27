@@ -21,6 +21,7 @@ require("lazy").setup({
 	{ import = "giovani.plugins.useless" },
 	{ import = "giovani.plugins.editing" },
 	{ import = "giovani.plugins.dap" },
+	{ import = "giovani.plugins.jupyter" },
 	checker = { enable = true, notify = false },
 	change_detection = { notify = false },
 })
