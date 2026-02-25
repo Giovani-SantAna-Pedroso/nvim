@@ -28,5 +28,11 @@ return {
 				never_run = { "yaml" }, -- filetypes which are never sent to a code runner
 			},
 		})
+		local keymap = vim.keymap.set
+		local opts = { silent = true }
+
+		vim.g.python3_host_prog = vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
+		-- create code block
+		keymap("n", "<leader>mi", "i```{python}<cr>```<esc>O", { desc = "insert code block", silent = true })
 	end,
 }

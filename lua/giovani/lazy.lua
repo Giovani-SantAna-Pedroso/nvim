@@ -22,6 +22,7 @@ require("lazy").setup({
 	{ import = "giovani.plugins.editing" },
 	{ import = "giovani.plugins.dap" },
 	{ import = "giovani.plugins.jupyter" },
+	{ import = "giovani.plugins.tmux" },
 	checker = { enable = true, notify = false },
 	change_detection = { notify = false },
 })

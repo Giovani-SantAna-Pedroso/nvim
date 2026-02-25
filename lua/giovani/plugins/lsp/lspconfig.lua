@@ -65,6 +65,11 @@ return {
 			on_attach = basic.on_attach,
 		})
 
+		lspconfig["qmlls"].setup({
+			capabilities = basic.capabilities,
+			on_attach = basic.on_attach,
+		})
+
 		lspconfig["gdscript"].setup(basic.capabilities)
 
 		lspconfig["pyright"].setup({

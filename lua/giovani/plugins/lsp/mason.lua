@@ -36,9 +36,10 @@ return {
 		if string.find(architcture, "x86_64") ~= nil then
 			toInstallLsp = {
 				"bashls",
+				"qmlls",
 				"lua_ls",
 				"clangd",
-				"gdtoolkit",
+				-- "gdtoolkit",
 				"dockerls",
 				"docker_compose_language_service",
 				"html",
