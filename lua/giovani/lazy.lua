@@ -16,6 +16,7 @@ require("lazy").setup({
 	{ import = "giovani.plugins.lsp" },
 	{ import = "giovani.plugins.interface" },
 	{ import = "giovani.plugins.life-quality" },
+	{ import = "giovani.plugins.ai" },
 	{ import = "giovani.plugins.essential" },
 	{ import = "giovani.plugins.navegation" },
 	{ import = "giovani.plugins.useless" },

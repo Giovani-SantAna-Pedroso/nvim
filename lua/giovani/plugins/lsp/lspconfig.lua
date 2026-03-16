@@ -72,10 +72,15 @@ return {
 
 		lspconfig["gdscript"].setup(basic.capabilities)
 
-		lspconfig["pyright"].setup({
+		-- lspconfig["pyright"].setup({
+		-- 	capabilities = basic.capabilities,
+		-- 	on_attach = basic_2.on_attach,
+		-- 	settings = require("giovani.plugins.lsp.settings.pyright"),
+		-- })
+		lspconfig["basedpyright"].setup({
 			capabilities = basic.capabilities,
 			on_attach = basic_2.on_attach,
-			settings = require("giovani.plugins.lsp.settings.pyright"),
+			settings = require("giovani.plugins.lsp.settings.basedpyright"),
 		})
 
 		lspconfig["ts_ls"].setup({
