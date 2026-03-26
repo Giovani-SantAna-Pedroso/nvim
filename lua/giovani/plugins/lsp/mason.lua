@@ -70,7 +70,7 @@ return {
 				"jdtls",
 				"docker_compose_language_service",
 				"html",
-				"pyright",
+				-- "pyright",
 				"ts_ls",
 				"jsonls",
 				"svelte",
