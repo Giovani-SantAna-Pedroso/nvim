@@ -6,12 +6,13 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local basic = require("giovani.plugins.lsp.settings.basic")
 		local basic_2 = require("giovani.plugins.lsp.settings.basic_2")
 
-		-- Show diagnostics on hover
-		vim.api.nvim_create_autocmd({ "CursorHold" }, {
+		-- =========================
+		-- Diagnostics on hover
+		-- =========================
+		vim.api.nvim_create_autocmd("CursorHold", {
 			pattern = "*",
 			callback = function()
 				for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
@@ -19,6 +20,7 @@ return {
 						return
 					end
 				end
+
 				vim.diagnostic.open_float({
 					scope = "cursor",
 					focusable = false,
@@ -50,149 +52,146 @@ return {
 			},
 		})
 
-		-- This function will tell if the nvim is runing on a pc or a cellphone
+		-- =========================
+		-- Architecture detection
+		-- =========================
 		local function get_architecture()
-			local pipe = io.popen("uname -m") -- for Unix-like systems
+			local pipe = io.popen("uname -m")
 			local architecture = pipe:read("*a")
 			pipe:close()
-			return architecture:gsub("%s+", "") -- remove any trailing whitespace
+			return architecture:gsub("%s+", "")
 		end
 
-		local architcture = get_architecture()
+		local architecture = get_architecture()
 
-		lspconfig["bashls"].setup({
+		-- =========================
+		-- Servers (lspconfig → vim.lsp.config)
+		-- =========================
+
+		vim.lsp.config("bashls", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("bashls")
 
-		lspconfig["qmlls"].setup({
-			capabilities = basic.capabilities,
-			on_attach = basic.on_attach,
-		})
+		vim.lsp.config("qmlls", {})
+		vim.lsp.enable("qmlls")
 
-		lspconfig["gdscript"].setup(basic.capabilities)
+		vim.lsp.config("gdscript", basic.capabilities)
+		vim.lsp.enable("gdscript")
 
-		-- lspconfig["pyright"].setup({
-		-- 	capabilities = basic.capabilities,
-		-- 	on_attach = basic_2.on_attach,
-		-- 	settings = require("giovani.plugins.lsp.settings.pyright"),
-		-- })
-		lspconfig["basedpyright"].setup({
+		vim.lsp.config("basedpyright", {
 			capabilities = basic.capabilities,
 			on_attach = basic_2.on_attach,
-			settings = require("giovani.plugins.lsp.settings.basedpyright"),
+			settings = require("giovani.plugins.lsp.settings.pyright"),
 		})
+		vim.lsp.enable("basedpyright")
 
-		lspconfig["ts_ls"].setup({
-
+		vim.lsp.config("ts_ls", {
 			capabilities = basic_2.capabilities,
 			on_attach = basic_2.on_attach,
 			settings = require("giovani.plugins.lsp.settings.tsserver"),
 		})
+		vim.lsp.enable("ts_ls")
 
-		-- lspconfig.eslint.setup({
-		-- 	cmd = { "bun", "x", "eslint_d", "--stdio" }, -- Use Bun for ESLint
-		-- 	on_attach = function(client)
-		-- 		client.server_capabilities.documentFormattingProvider = true
-		-- 	end,
-		-- })
-		--
-		lspconfig["cssls"].setup({
+		vim.lsp.config("cssls", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("cssls")
 
-		lspconfig["docker_compose_language_service"].setup({
+		vim.lsp.config("docker_compose_language_service", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("docker_compose_language_service")
 
-		lspconfig["dockerls"].setup({
+		vim.lsp.config("dockerls", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("dockerls")
 
-		lspconfig["html"].setup({
+		vim.lsp.config("html", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("html")
 
-		lspconfig["jsonls"].setup({
-			capabilities = basic.capabilities,
-			on_attach = basic.on_attach,
-			-- settings =  require("giovani.plugins.lsp.settings.json")
-		})
-
-		lspconfig["jdtls"].setup({
-			capabilities = basic.capabilities,
-			on_attach = basic.on_attach,
-			-- settings =  require("giovani.plugins.lsp.settings.json")
-		})
-
-		-- ✓ csharp-language-server csharp_ls
-
-		-- lspconfig["omnisharp"].setup({
-		-- 	capabilities = basic.capabilities,
-		-- 	on_attach = basic.on_attach,
-		-- 	cmd = { "dotnet", "/usr/bin/omnisharp" },
-		-- enable_roslyn_analysers = true,
-		-- enable_import_completion = true,
-		-- organize_imports_on_format = true,
-		-- enable_decompilation_support = true,
-		-- settings = require("giovani.plugins.lsp.settings.omnisharp"),
-		-- })
-
-		lspconfig["prismals"].setup({
+		vim.lsp.config("jsonls", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("jsonls")
 
-		lspconfig["tailwindcss"].setup({
+		vim.lsp.config("jdtls", {
+			capabilities = basic.capabilities,
+			on_attach = basic.on_attach,
+		})
+		vim.lsp.enable("jdtls")
+
+		vim.lsp.config("prismals", {
+			capabilities = basic.capabilities,
+			on_attach = basic.on_attach,
+		})
+		vim.lsp.enable("prismals")
+
+		vim.lsp.config("tailwindcss", {
 			capabilities = basic_2.capabilities,
 			on_attach = basic_2.on_attach,
 			settings = require("giovani.plugins.lsp.settings.tsserver"),
 		})
+		vim.lsp.enable("tailwindcss")
 
-		lspconfig["svelte"].setup({
+		vim.lsp.config("svelte", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 			settings = require("giovani.plugins.lsp.settings.svelte"),
 		})
+		vim.lsp.enable("svelte")
 
-		lspconfig["yamlls"].setup({
+		vim.lsp.config("yamlls", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("yamlls")
 
-		lspconfig["solidity_ls"].setup({
+		vim.lsp.config("solidity_ls", {
 			capabilities = basic.capabilities,
 			on_attach = basic.on_attach,
 		})
+		vim.lsp.enable("solidity_ls")
 
-		-- Only install this if the nvim is runing on a PC
-		if string.find(architcture, "x86_64") ~= nil then
-			lspconfig["csharp_ls"].setup({
+		-- =========================
+		-- Architecture-specific
+		-- =========================
+		if string.find(architecture, "x86_64") then
+			vim.lsp.config("csharp_ls", {
 				capabilities = basic.capabilities,
 				on_attach = basic.on_attach,
 			})
+			vim.lsp.enable("csharp_ls")
 
-			lspconfig["clangd"].setup({
+			vim.lsp.config("clangd", {
 				capabilities = basic_2.capabilities,
 				on_attach = basic_2.on_attach,
 				settings = require("giovani.plugins.lsp.settings.clangd"),
 			})
+			vim.lsp.enable("clangd")
 
-			lspconfig["lua_ls"].setup({
+			vim.lsp.config("lua_ls", {
 				capabilities = basic.capabilities,
 				on_attach = basic.on_attach,
 				settings = require("giovani.plugins.lsp.settings.lua"),
 			})
+			vim.lsp.enable("lua_ls")
 
-			lspconfig["rust_analyzer"].setup({
+			vim.lsp.config("rust_analyzer", {
 				capabilities = basic_2.capabilities,
 				on_attach = basic_2.on_attach,
 				settings = require("giovani.plugins.lsp.settings.rust_analyzer"),
 			})
+			vim.lsp.enable("rust_analyzer")
 		end
 	end,
 }
