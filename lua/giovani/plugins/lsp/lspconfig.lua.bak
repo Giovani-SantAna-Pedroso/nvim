@@ -1,3 +1,58 @@
+vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = " ",
+			[vim.diagnostic.severity.WARN] = " ",
+			[vim.diagnostic.severity.INFO] = " ",
+			[vim.diagnostic.severity.HINT] = "󰠠 ",
+		},
+		[vim.diagnostic.severity.ERROR] = "Error",
+		[vim.diagnostic.severity.WARN] = "Warn",
+		linehl = {
+			[vim.diagnostic.severity.INFO] = "Info",
+			[vim.diagnostic.severity.HINT] = "Hint",
+		},
+	},
+})
+
+-- vim.lsp.config("tailwindcss", {
+-- 	-- capabilities = basic_2.capabilities,
+-- 	-- on_attach = basic_2.on_attach,
+-- 	settings = require("giovani.plugins.lsp.settings.tsserver"),
+-- })
+-- vim.lsp.enable("tailwindcss")
+
+-- vim.lsp.config("ts_ls", {
+-- 	-- capabilities = basic_2.capabilities,
+-- 	-- on_attach = basic_2.on_attach,
+-- 	settings = require("giovani.plugins.lsp.settings.tsserver"),
+-- })
+-- vim.lsp.enable("ts_ls")
+
+vim.o.autocomplete = true
+
+-- vim.lsp.config("lua_ls", {
+-- 	settings = {
+-- 		Lua = {
+-- 			runtime = { version = "LuaJIT" },
+-- 			diagnostics = {
+-- 				globals = { "vim" },
+-- 			},
+-- 			workspace = {
+-- 				checkThirdParty = false,
+-- 				library = {
+-- 					vim.env.VIMRUNTIME,
+-- 				},
+-- 			},
+-- 			telemetry = { enable = false },
+-- 		},
+-- 	},
+-- })
+--
+-- Enable one or more servers
+vim.lsp.enable("lua_ls")
+vim.lsp.enable({ "gopls", "jsonls" })
+
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },

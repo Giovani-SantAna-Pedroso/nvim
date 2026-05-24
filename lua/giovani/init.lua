@@ -4,7 +4,7 @@ require("giovani.options")
 -- require("giovani.packer")
 require("giovani.lazy")
 require("giovani.godot")
--- require("giovani.spell")
+require("giovani.spell")
 -- require("giovani.lazy")
 -- colorshema must be after the lazy
 -- require("giovani.colorschema")
@@ -20,3 +20,4 @@ require("giovani.godot")
 -- require("giovani.folding")
 --
 require("giovani.fonts")
+require("giovani.lsp")
