@@ -1,6 +1,6 @@
 require("keybinds")
 require("options")
-require("lsp_configs")
+-- require("lsp_configs")
 
 -- # plugins
 -- ## Interface 

@@ -68,3 +68,13 @@ keymap("n", "<leader>fw", ":TroubleToggle <CR>", opts)
 --Split windown
 keymap("n", "<leader>sv", ":vsplit <CR>", opts)
 keymap("n", "<leader>sh", ":split <CR>", opts)
+
+
+
+-- usefull
+keymap("n", "<leader>w", ":write <CR>", opts, {desc="Save file"})
+keymap("n", "<leader>lf", vim.lsp.buf.format, opts, {desc="Format file"})
+
+
+
+

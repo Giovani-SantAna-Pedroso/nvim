@@ -91,6 +91,9 @@ return {
       },
       codeLens = { enable = true },
       hint = { enable = true, semicolon = 'Disable' },
+            completion = {
+                enable = true,
+            },
     },
   },
 }
