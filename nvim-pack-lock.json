@@ -24,6 +24,10 @@
       "rev": "1b8809dcbb20f023b7cc69ec560e927ae858f9b2",
       "src": "https://github.com/Saghen/blink.cmp"
     },
+    "blink.lib": {
+      "rev": "c09dd66e9ad97e1a7777f3fa5f0504ca2e877231",
+      "src": "https://github.com/Saghen/blink.lib"
+    },
     "bufferline": {
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
