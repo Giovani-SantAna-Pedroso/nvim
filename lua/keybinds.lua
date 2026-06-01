@@ -59,7 +59,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --Buffer line
 
 -- Tabs
-keymap("n", "<leader>n", ":tabnew <CR>", opts)
+keymap("n", "<leader>n", ":tabnew <CR>", opts, { desc = "New tab" })
 keymap("n", "<leader>0", ":tabclose <CR>", opts)
 
 --Trouble
@@ -69,12 +69,6 @@ keymap("n", "<leader>fw", ":TroubleToggle <CR>", opts)
 keymap("n", "<leader>sv", ":vsplit <CR>", opts)
 keymap("n", "<leader>sh", ":split <CR>", opts)
 
-
-
 -- usefull
-keymap("n", "<leader>w", ":write <CR>", opts, {desc="Save file"})
-keymap("n", "<leader>lf", vim.lsp.buf.format, opts, {desc="Format file"})
-
-
-
-
+keymap("n", "<leader>w", ":write <CR>", opts, { desc = "Save file" })
+keymap("n", "<leader>lf", vim.lsp.buf.format, opts, { desc = "Format file" })

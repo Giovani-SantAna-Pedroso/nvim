@@ -1,0 +1,14 @@
+vim.pack.add({
+	{ src = "https://github.com/numToStr/Comment.nvim" },
+	{ src = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring" },
+})
+
+local comment = require("Comment")
+
+require("ts_context_commentstring").setup({
+	enable_autocmd = false,
+})
+
+comment.setup({
+	pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+})
