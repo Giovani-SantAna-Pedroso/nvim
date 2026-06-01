@@ -1,5 +1,6 @@
 -- It need setup
 vim.pack.add({
-  "https://github.com/xiyaowong/transparent.nvim"
+	"https://github.com/xiyaowong/transparent.nvim",
 })
 
+require("transparent").setup()
