@@ -104,6 +104,10 @@
       "rev": "a1d504892f2bc56c2e79b65c6faded2fd21f3eca",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
+    "nvim-docs-view": {
+      "rev": "9a262fa7e181e924d355e8725c68c48f076138b1",
+      "src": "https://github.com/amrbashir/nvim-docs-view"
+    },
     "nvim-lspconfig": {
       "rev": "a4ed4e761c400849e8c9f8bda33e5083f890268c",
       "src": "https://github.com/neovim/nvim-lspconfig"
