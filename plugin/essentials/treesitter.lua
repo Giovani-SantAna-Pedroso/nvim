@@ -22,6 +22,7 @@ treesitter.install({
 	"json",
 	"javascript",
 	"typescript",
+	"tsx",
 	"c",
 	"lua",
 	"vim",
@@ -30,9 +31,8 @@ treesitter.install({
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "<filetype>" },
-	callback = function()
-		vim.treesitter.start()
+	callback = function(args)
+		pcall(vim.treesitter.start, args.buf)
 	end,
 })
 
